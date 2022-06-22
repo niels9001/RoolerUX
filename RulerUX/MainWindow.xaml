@@ -1,0 +1,58 @@
+﻿<winex:WindowEx
+    x:Class="RulerUX.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RulerUX"
+    xmlns:winex="using:WinUIEx"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ 
+  
+    IsShownInSwitchers="False"
+    IsTitleBarVisible="False"
+    IsResizable="False"
+    IsAlwaysOnTop="True"
+    IsMaximizable="False"
+    IsMinimizable="False"
+    mc:Ignorable="d">
+    <winex:WindowEx.Backdrop>
+        <!--<winex:AcrylicSystemBackdrop />-->
+        <winex:AcrylicSystemBackdrop DarkTintOpacity="0.8" DarkTintColor="Black"  DarkFallbackColor="#333"
+                                   LightTintOpacity="0.6" LightTintColor="White" LightFallbackColor="#eee" />
+    </winex:WindowEx.Backdrop>
+    <Grid>
+        <Grid.Resources>
+            <SolidColorBrush x:Key="ToggleButtonBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="ButtonBackground" Color="Transparent" />
+            <Style TargetType="ToggleButton" BasedOn="{StaticResource DefaultToggleButtonStyle}">
+                <Setter Property="MinHeight" Value="30" />
+                <Setter Property="MinWidth" Value="30" />
+                <Setter Property="Width" Value="30" />
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="FontFamily" Value="Segoe Fluent Icons" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+            <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+                <Setter Property="MinHeight" Value="30" />
+                <Setter Property="MinWidth" Value="30" />
+                <Setter Property="Width" Value="30" />
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="FontFamily" Value="Segoe Fluent Icons" />
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+        </Grid.Resources>
+  
+    <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
+            <ToggleButton Content="&#xEF20;" ToolTipService.ToolTip="Bounds" IsChecked="True"/>
+            <ToggleButton Content="&#xE799;" ToolTipService.ToolTip="Spacing"/>
+            <ToggleButton Content="&#xE76F;" ToolTipService.ToolTip="Horizontal spacing"/>
+            <ToggleButton Content="&#xE784;" ToolTipService.ToolTip="Vertical spacing"/>
+            <AppBarSeparator Height="36" />
+            <Button Content="&#xE8BB;" ToolTipService.ToolTip="Close"/>
+        </StackPanel>
+    </Grid>
+</winex:WindowEx>

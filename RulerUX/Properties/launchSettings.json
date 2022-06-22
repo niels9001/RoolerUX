@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "RulerUX (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "RulerUX (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
